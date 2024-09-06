@@ -40,4 +40,11 @@
     <color name="navy">#001F3F</color>
     <color name="olive">#808000</color>
     <color name="cyan">#00FFFF</color>
+    
+    <!-- Colores Oficiales -->
+    
+    <color name="colorPrimary">#74d7da</color>
+    <color name="colorBackground">#ececec</color>
+    <color name="colorAccent">#d269e6</color>
+
 </resources>

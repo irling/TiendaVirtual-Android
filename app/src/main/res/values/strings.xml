@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">MockupPractice</string>
 
-    <string name="register">sin cuenta? registrarte aquí</string>
+    <string name="register">sin cuenta? registrate aquí</string>
     <string name="login">login</string>
-    <string name="txtInicioSesion">iniciar sesión</string>
-    <string name="registerPage">registrarse</string>
+    <string name="txtInicioSesion">Con cuenta? Inicia sesión</string>
+    <string name="registerPage">Registrarse</string>
+    <string name="titleLogin">Iniciar Sesión</string>
+    <string name="categoriasName">Categorias</string>
 </resources>
