@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CategoriasActivity"
+    tools:context=".screeen.CategoriasActivity"
     android:background="@color/colorBackground">
 
     <LinearLayout
@@ -21,13 +21,13 @@
             android:text="@string/categoriasName"
             android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:layout_marginBottom="100dp">
+            android:layout_marginBottom="50dp">
 
             <ImageButton
                 android:id="@+id/imgBtnOne"
@@ -70,8 +70,8 @@
         <Button
             android:id="@+id/btnGoShop"
             android:backgroundTint="@color/colorPrimary"
-            android:layout_width="180dp"
-            android:layout_height="55dp"
+            android:layout_width="230dp"
+            android:layout_height="60dp"
             android:text="Tienda"
             android:textAllCaps="true"
             android:textSize="20sp"

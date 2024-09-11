@@ -11,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mockuppractice.screeen.CategoriasActivity
 import com.google.firebase.Firebase
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.analytics
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun HomePage (){
-        val intentHomePage = Intent(this, HomePageActivity::class.java)
+        val intentHomePage = Intent(this, CategoriasActivity::class.java)
         startActivity(intentHomePage)
     }
 

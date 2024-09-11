@@ -61,7 +61,7 @@
                     android:layout_gravity="center"
                     android:text="Email"
                     android:textAllCaps="true"
-                    android:textColor="@color/gray_light"
+                    android:textColor="@color/gray"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -82,7 +82,7 @@
                     android:layout_gravity="center"
                     android:text="Password"
                     android:textAllCaps="true"
-                    android:textColor="@color/gray_light"
+                    android:textColor="@color/gray"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -91,20 +91,57 @@
                     android:layout_width="300dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="140dp"
+                    android:layout_marginBottom="14dp"
                     android:background="@drawable/rounded_background"
                     android:inputType="textPassword"
                     android:textColor="@color/blue"
                     android:textSize="20sp" />
 
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="@string/forgotPwd"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:background="@color/colorBackground"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/google" />
+
+                    <ImageButton
+                        android:background="@color/colorBackground"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/facebook"
+                        android:layout_marginStart="70dp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="180dp"
-                android:layout_height="55dp"
+                android:layout_width="280dp"
+                android:layout_height="65dp"
                 android:layout_marginTop="30dp"
+                android:textSize="25sp"
                 android:backgroundTint="@color/colorPrimary"
                 android:text="@string/login"
                 android:textAllCaps="true"
