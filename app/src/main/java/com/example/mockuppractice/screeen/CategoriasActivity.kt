@@ -1,10 +1,11 @@
-package com.example.mockuppractice
+package com.example.mockuppractice.screeen
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.mockuppractice.R
 
 class CategoriasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
