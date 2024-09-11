@@ -8,4 +8,8 @@
     <string name="titleLogin">Iniciar Sesión</string>
     <string name="categoriasName">Categorias</string>
     <string name="forgotPwd">¿Olvidaste tu contraseña?</string>
+
+    <string name="TitleShirt">Polos</string>
+    <string name="TitleMonitor">Monitores</string>
+    <string name="TitleBags">Bolsos</string>
 </resources>
