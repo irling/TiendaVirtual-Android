@@ -19,11 +19,11 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var  firebaseAnalytics: FirebaseAnalytics
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
-    private lateinit var btnLogin : Button
-    private lateinit var edEmaiLogin : EditText
-    private lateinit var edPwdLogin : EditText
+    private lateinit var btnLogin: Button
+    private lateinit var edEmaiLogin: EditText
+    private lateinit var edPwdLogin: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         //DECLARACION DE VARIABLES
         val tvRegisterPage = findViewById<TextView>(R.id.tvRegister)
-        tvRegisterPage.setOnClickListener{registerPage()}
+        tvRegisterPage.setOnClickListener { registerPage() }
 
         btnLogin = findViewById(R.id.btnLogin)
         edEmaiLogin = findViewById(R.id.edUsername)
@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                 ).addOnCompleteListener {
                     if (it.isSuccessful) {
                         HomePage()
+                        Toast.makeText(this, "Sesión iniciada", Toast.LENGTH_SHORT).show()
                         finish()
                     } else {
                         Toast.makeText(this, "Error autenticando usuario", Toast.LENGTH_SHORT)
@@ -72,14 +73,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun HomePage (){
+    private fun HomePage() {
         val intentHomePage = Intent(this, CategoriasActivity::class.java)
         startActivity(intentHomePage)
     }
 
 
-    private fun registerPage (){
-        val intentRegisterPage = Intent(this,RegisterActivity::class.java )
+    private fun registerPage() {
+        val intentRegisterPage = Intent(this, RegisterActivity::class.java)
         startActivity(intentRegisterPage)
         finish()
         //Toast.makeText(this, "Texto clicado de register", Toast.LENGTH_SHORT).show()

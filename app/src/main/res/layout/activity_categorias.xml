@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screeen.CategoriasActivity"
-    android:background="@color/colorBackground">
+    android:background="@color/colorBackground"
+    tools:context=".screeen.CategoriasActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,9 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:text="@string/categoriasName"
-            android:textAllCaps="true"
             android:textColor="@color/colorPrimary"
-            android:textSize="40sp"
+            android:textSize="45sp"
             android:textStyle="bold" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,52 +29,60 @@
             android:layout_marginBottom="50dp">
 
             <ImageButton
-                android:id="@+id/imgBtnOne"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toTopOf="@+id/imgBtnThree"
-                app:layout_constraintEnd_toStartOf="@+id/imgBtnTwo"
+                android:id="@+id/imgBtnShirt"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/clotheshirt"
+                app:layout_constraintBottom_toTopOf="@+id/imgBtnShop"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnMonitor"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imgBtnTwo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toTopOf="@+id/imgBtnFour"
+                android:id="@+id/imgBtnMonitor"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/monitor"
+                app:layout_constraintBottom_toTopOf="@+id/imgBtnBag"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgBtnOne"
+                app:layout_constraintStart_toEndOf="@+id/imgBtnShirt"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/imgBtnThree"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:id="@+id/imgBtnShop"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/shop"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imgBtnFour"
+                app:layout_constraintEnd_toStartOf="@+id/imgBtnBag"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgBtnOne" />
+                app:layout_constraintTop_toBottomOf="@+id/imgBtnShirt" />
 
             <ImageButton
-                android:id="@+id/imgBtnFour"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:id="@+id/imgBtnBag"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/bag"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgBtnThree"
-                app:layout_constraintTop_toBottomOf="@+id/imgBtnTwo" />
+                app:layout_constraintStart_toEndOf="@+id/imgBtnShop"
+                app:layout_constraintTop_toBottomOf="@+id/imgBtnMonitor" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
             android:id="@+id/btnGoShop"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_width="230dp"
+            android:layout_width="240dp"
             android:layout_height="60dp"
+            android:backgroundTint="@color/colorPrimary"
             android:text="Tienda"
             android:textAllCaps="true"
-            android:textSize="20sp"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
