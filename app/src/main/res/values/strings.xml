@@ -7,4 +7,5 @@
     <string name="registerPage">Registrarse</string>
     <string name="titleLogin">Iniciar Sesión</string>
     <string name="categoriasName">Categorias</string>
+    <string name="forgotPwd">¿Olvidaste tu contraseña?</string>
 </resources>
