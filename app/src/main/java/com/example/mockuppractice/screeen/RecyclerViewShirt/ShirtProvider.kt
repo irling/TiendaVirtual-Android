@@ -8,22 +8,22 @@ class ShirtProvider {
 
         val ShirtListFirst = listOf<Shirt>(
             Shirt(
-                "https://i.imgur.com/CCMdPAe.jpeg"
+                "https://i.imgur.com/v3eEDb9.jpeg"
             ),
             Shirt(
-                "https://i.imgur.com/LI3vUCe.png"
+                "https://i.imgur.com/8pBncLW.jpeg"
             ),
             Shirt(
-                "https://i.imgur.com/UGKRyxL.jpeg"
+                "https://i.imgur.com/Hxnsisk.jpeg"
             ),
             Shirt(
-                "https://i.imgur.com/PyULbkW.jpeg"
+                "https://i.imgur.com/Iuaupxe.jpeg"
             ),
             Shirt(
-                "https://i.imgur.com/7Apzese.jpeg"
+                "https://i.imgur.com/hlJPpXp.jpeg"
             ),
             Shirt(
-                "https://i.imgur.com/hDnm4yA.jpeg"
+                "https://i.imgur.com/Ci2mUuC.jpeg"
             )
         )
 

@@ -1,6 +1,8 @@
 package com.example.mockuppractice.screeen
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +16,8 @@ import com.example.mockuppractice.screeen.RecyclerViewShirt.ShirtProvider
 class ShirtActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityShirtBinding
+    private lateinit var btngoShop: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +30,19 @@ class ShirtActivity : AppCompatActivity() {
             insets
         }
         renderShirt()
+        btngoShop = findViewById(R.id.btnGoShop)
+        screenShop()
     }
 
     private fun renderShirt() {
         binding.rvShirt.layoutManager = LinearLayoutManager(this)
         binding.rvShirt.adapter = ShirtAdapter(ShirtProvider.ShirtListFirst)
+    }
+
+    private fun screenShop (){
+        btngoShop.setOnClickListener{
+            val intentShop = Intent(this, ShopPaymentActivity::class.java)
+            startActivity(intentShop)
+        }
     }
 }

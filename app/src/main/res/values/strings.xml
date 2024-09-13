@@ -7,6 +7,8 @@
     <string name="registerPage">Registrarse</string>
     <string name="titleLogin">Iniciar Sesión</string>
     <string name="categoriasName">Categorias</string>
+    <string name="carrito">Carrito de compras</string>
+    <string name="detalles">Detalles de Productos</string>
     <string name="forgotPwd">¿Olvidaste tu contraseña?</string>
 
     <string name="TitleShirt">Polos</string>

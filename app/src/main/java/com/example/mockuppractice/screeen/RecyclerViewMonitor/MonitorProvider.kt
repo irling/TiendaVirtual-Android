@@ -8,22 +8,22 @@ class MonitorProvider {
 
         val MonitorListFirst = listOf<Monitor>(
             Monitor(
-                "https://i.imgur.com/CCMdPAe.jpeg"
+                "https://i.imgur.com/oKUJv19.jpeg"
             ),
             Monitor(
-                "https://i.imgur.com/LI3vUCe.png"
+                "https://i.imgur.com/Xcfu0Zj.jpeg"
             ),
             Monitor(
-                "https://i.imgur.com/UGKRyxL.jpeg"
+                "https://i.imgur.com/fTOVNGE.jpeg"
             ),
             Monitor(
-                "https://i.imgur.com/PyULbkW.jpeg"
+                "https://i.imgur.com/gKV9SQl.jpeg"
             ),
             Monitor(
-                "https://i.imgur.com/7Apzese.jpeg"
+                "https://i.imgur.com/AnyCjsf.jpeg"
             ),
             Monitor(
-                "https://i.imgur.com/hDnm4yA.jpeg"
+                "https://i.imgur.com/MBh2JUI.jpeg"
             )
         )
 

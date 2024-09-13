@@ -2,6 +2,7 @@ package com.example.mockuppractice.screeen
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +16,7 @@ class CategoriasActivity : AppCompatActivity() {
     private lateinit var btnMonitor: ImageButton
     private lateinit var btnShopPayment: ImageButton
     private lateinit var btnBag: ImageButton
+    private lateinit var btnShop: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,7 @@ class CategoriasActivity : AppCompatActivity() {
         btnMonitor = findViewById(R.id.imgBtnMonitor)
         btnShopPayment = findViewById(R.id.imgBtnShop)
         btnShirt = findViewById(R.id.imgBtnShirt)
+        btnShop = findViewById(R.id.btnGoShop)
 
         changeScreen()
 
@@ -52,6 +55,11 @@ class CategoriasActivity : AppCompatActivity() {
         btnShirt.setOnClickListener {
             val intentSCShirt = Intent(this, ShirtActivity::class.java)
             startActivity(intentSCShirt)
+        }
+
+        btnShop.setOnClickListener{
+            val intentShop = Intent(this, ShopPaymentActivity::class.java)
+            startActivity(intentShop)
         }
 
     }
