@@ -214,7 +214,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="260dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
 
             <ImageButton
                 android:id="@+id/btnNxtPageDetails"
@@ -242,6 +243,19 @@
 
 
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:paddingTop="15dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/BottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
