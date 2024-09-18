@@ -4,13 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.screeen.CategoriasActivity
 import com.google.firebase.auth.FirebaseAuth
 
-class HomePageActivity : CategoriasActivity() {
+class SettingsActivity : CategoriasActivity() {
 
     private lateinit var btnCerrarSesion: Button
 

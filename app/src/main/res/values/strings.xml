@@ -11,6 +11,11 @@
     <string name="detalles">Detalles de Productos</string>
     <string name="forgotPwd">¿Olvidaste tu contraseña?</string>
 
+    <string name="delivery">Direcciones para Delivery</string>
+    <string name="addAddress">Añadir dirección</string>
+    <string name="showAddress">Ver direcciones</string>
+
+
     <string name="TitleShirt">Polos</string>
     <string name="TitleMonitor">Monitores</string>
     <string name="TitleBags">Bolsos</string>

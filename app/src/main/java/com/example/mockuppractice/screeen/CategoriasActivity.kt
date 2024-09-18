@@ -2,14 +2,14 @@ package com.example.mockuppractice.screeen
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.mockuppractice.HomePageActivity
+import com.example.mockuppractice.SettingsActivity
 import com.example.mockuppractice.R
+import com.example.mockuppractice.screeen.Direcciones.DireccionActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 open class CategoriasActivity : AppCompatActivity() {
@@ -87,9 +87,17 @@ open class CategoriasActivity : AppCompatActivity() {
                 }
 
                 R.id.setting -> {
-                    val intentSetting = Intent(this, HomePageActivity::class.java)
+                    val intentSetting = Intent(this, SettingsActivity::class.java)
                     intentSetting.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
                     startActivity(intentSetting)
+                    finish()
+                    true
+                }
+
+                R.id.address ->{
+                    val intentAddress = Intent(this, DireccionActivity::class.java)
+                    intentAddress.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+                    startActivity(intentAddress)
                     finish()
                     true
                 }
