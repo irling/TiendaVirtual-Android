@@ -27,6 +27,7 @@ class HomePageActivity : CategoriasActivity() {
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion)
 
         cerrarSesion()
+        //Heredado de CategoriesActivity.kt
         NavigationBottomNav(R.id.setting)
     }
 
