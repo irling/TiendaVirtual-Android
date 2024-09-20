@@ -57,6 +57,9 @@ dependencies {
     implementation ("com.squareup.picasso:picasso:2.5.2")
     implementation ("com.github.bumptech.glide:glide:4.16.0")
 
+    //Dependencias Gson
+    implementation ("com.google.code.gson:gson:2.8.8")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
