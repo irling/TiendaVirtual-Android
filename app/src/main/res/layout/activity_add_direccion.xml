@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".screeen.Direcciones.AddDireccionActivity"
     android:background="@color/colorBackground"
-    android:focusableInTouchMode="true">
+    android:focusableInTouchMode="true"
+    tools:context=".screeen.Direcciones.AddDireccionActivity">
 
 
     <LinearLayout
@@ -25,79 +25,86 @@
             android:textSize="37sp"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginBottom="50dp"
-            android:orientation="vertical">
-
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
 
             <EditText
                 android:id="@+id/edDireccion"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="30dp"
                 android:background="@drawable/rounded_background"
+                android:hint="Dirección"
                 android:inputType="text"
                 android:textColor="@color/blue"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edNumeroCasa"
-                android:layout_width="300dp"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Número"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/edTipo"/>
+
+            <EditText
+                android:id="@+id/edTipo"
+                android:layout_width="140dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/rounded_background"
+                android:hint="Casa/depa"
                 android:inputType="text"
                 android:textColor="@color/blue"
-                android:textSize="20sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_margin="16dp"
-                android:gravity="center"
-                android:layout_gravity="center">
-
-                <AutoCompleteTextView
-                    android:id="@+id/actvListDepartments"
-                    android:padding="10dp"
-                    android:layout_width="300dp"
-                    android:layout_height="50dp"
-                    android:hint="item"
-                    android:inputType="none"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="260dp"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/btnNxtPageShop"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:backgroundTint="@color/colorPrimary"
-                android:src="@drawable/before"
-                app:layout_constraintEnd_toStartOf="@+id/btnLstPageShop"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/btnLstPageShop"
-                android:layout_width="65dp"
-                android:layout_height="65dp"
-                android:layout_marginStart="100dp"
-                android:backgroundTint="@color/colorPrimary"
-                android:src="@drawable/next"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnGuardarDireccion"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnNxtPageShop"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/edNumeroCasa"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion"
+                app:layout_constraintVertical_bias="0.0" />
 
+            <EditText
+                android:id="@+id/edreferencia"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Referencia"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnGuardarDireccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion" />
+
+
+            <Button
+                android:id="@+id/btnGuardarDireccion"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Guardar"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

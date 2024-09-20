@@ -8,8 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.R
+import com.example.mockuppractice.screeen.CategoriasActivity
 
-class DireccionActivity : AppCompatActivity() {
+class DireccionActivity : CategoriasActivity() {
 
     private lateinit var btnAddAdrs: Button
     private lateinit var btnShowAdrs: Button
@@ -26,7 +27,7 @@ class DireccionActivity : AppCompatActivity() {
 
         btnShowAdrs = findViewById(R.id.btnShowAddress)
         btnAddAdrs = findViewById(R.id.btnAddAddress)
-
+        NavigationBottomNav(R.id.address)
         changeScreen()
     }
 

@@ -21,6 +21,10 @@
             android:name=".screeen.Direcciones.DireccionActivity"
             android:exported="false" />
         <activity
+            android:name=".screeen.Direcciones.AddDireccionActivity"
+            android:exported="false" />
+        <activity
+
             android:name=".screeen.DetailsActivity"
             android:exported="false" />
         <activity

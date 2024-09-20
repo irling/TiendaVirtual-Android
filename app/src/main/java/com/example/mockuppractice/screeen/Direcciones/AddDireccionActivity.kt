@@ -11,8 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.R
+import com.example.mockuppractice.screeen.CategoriasActivity
 
-class AddDireccionActivity : AppCompatActivity() {
+class AddDireccionActivity : CategoriasActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,21 +23,5 @@ class AddDireccionActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val deparments = listOf("Lima", "pucallpa", "Arequipa")
-
-        val autoComplete : AutoCompleteTextView = findViewById(R.id.actvListDepartments)
-
-        val adapter = ArrayAdapter(this, R.layout.list_item_departamentos, deparments)
-
-        autoComplete.setAdapter(adapter)
-
-        autoComplete.onItemClickListener = AdapterView.OnItemClickListener{
-            adapterView, view, i, l ->
-
-            val itemSelected = adapterView.getItemAtPosition(i)
-            Toast.makeText(this, "Item: $itemSelected", Toast.LENGTH_SHORT).show()
-        }
-
     }
 }
