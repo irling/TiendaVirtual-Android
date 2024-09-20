@@ -15,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.R
 import com.example.mockuppractice.screeen.CategoriasActivity
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class AddDireccionActivity : CategoriasActivity() {
 
@@ -49,12 +50,18 @@ class AddDireccionActivity : CategoriasActivity() {
             val referencia = ETreferencia.text.toString()
 
             val nuevaDireccion = formDireccion(direccion, numeroDire, tipoDomi, referencia)
-            direcciones.add(nuevaDireccion)
 
             val sharedPreferences = getSharedPreferences("DireccionUsers", MODE_PRIVATE)
+            val json = sharedPreferences.getString("Direcciones", "[]")
+
+            val type = object : TypeToken<List<formDireccion>>() {}.type
+            val direcciones: MutableList<formDireccion> = gson.fromJson(json, type)
+
+            direcciones.add(nuevaDireccion)
+
             val editor = sharedPreferences.edit()
-            val json = gson.toJson(direcciones)
-            editor.putString("Direcciones", json)
+            val jsonUpdated = gson.toJson(direcciones)
+            editor.putString("Direcciones", jsonUpdated)
             editor.apply()
 
             Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show()

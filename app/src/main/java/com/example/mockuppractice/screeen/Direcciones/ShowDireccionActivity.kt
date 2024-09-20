@@ -28,6 +28,8 @@ class ShowDireccionActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        showDataDirecciones()
     }
 
     private fun showDataDirecciones() {
@@ -36,7 +38,7 @@ class ShowDireccionActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("DireccionUsers", MODE_PRIVATE)
         val json = sharedPreferences.getString("Direcciones", "[]")
 
-        val type = object : TypeToken<formDireccion>() {}.type
+        val type = object : TypeToken<List<formDireccion>>() {}.type
         val direcciones: List<formDireccion> = gson.fromJson(json, type)
 
         val direccionText = direcciones.joinToString("\n") {
