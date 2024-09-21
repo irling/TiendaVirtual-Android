@@ -14,8 +14,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.R
 import com.example.mockuppractice.screeen.CategoriasActivity
+import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class AddDireccionActivity : CategoriasActivity() {
 
@@ -66,9 +66,9 @@ class AddDireccionActivity : CategoriasActivity() {
 
             Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show()
 
+
         }
 
     }
-
 
 }
