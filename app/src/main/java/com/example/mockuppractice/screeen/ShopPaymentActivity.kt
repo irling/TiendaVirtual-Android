@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mockuppractice.R
 
-class ShopPaymentActivity : AppCompatActivity() {
+class ShopPaymentActivity : CategoriasActivity() {
 
     private lateinit var btnNextDeta: ImageButton
     private lateinit var btnBfrtDeta: ImageButton
@@ -28,6 +28,7 @@ class ShopPaymentActivity : AppCompatActivity() {
         btnBfrtDeta = findViewById(R.id.btnLstPageDetails)
         btnNextDeta = findViewById(R.id.btnNxtPageDetails)
         changePageDetails()
+        NavigationBottomNav(R.id.shopping)
     }
 
     private fun changePageDetails (){
@@ -35,13 +36,13 @@ class ShopPaymentActivity : AppCompatActivity() {
         btnBfrtDeta.setOnClickListener{
             val intentbfrDetail = Intent(this, DetailsActivity::class.java)
             startActivity(intentbfrDetail)
-            finish()
+            //finish()
         }
 
         btnNextDeta.setOnClickListener{
             val intentNxtDetail = Intent(this, DetailsActivity::class.java)
             startActivity(intentNxtDetail)
-            finish()
+            //finish()
         }
     }
 }

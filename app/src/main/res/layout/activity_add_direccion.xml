@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusableInTouchMode="true"
+    tools:context=".screeen.Direcciones.AddDireccionActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="@string/addAddress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="37sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <EditText
+                android:id="@+id/edDireccion"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Dirección"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edNumeroCasa"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Número"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/edTipo"/>
+
+            <EditText
+                android:id="@+id/edTipo"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Casa/depa"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnGuardarDireccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edNumeroCasa"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/edreferencia"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_background"
+                android:hint="Referencia"
+                android:inputType="text"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnGuardarDireccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edDireccion" />
+
+
+            <Button
+                android:id="@+id/btnGuardarDireccion"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="Guardar"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
