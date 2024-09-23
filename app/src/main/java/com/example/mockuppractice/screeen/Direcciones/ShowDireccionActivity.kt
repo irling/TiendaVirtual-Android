@@ -45,10 +45,9 @@ class ShowDireccionActivity : AppCompatActivity() {
         adapter = DireccionAdapter(
             this,
             direcciones,
-            onEditClicked = { position -> editDireccion(position) },
-            onDeleteClicked = { position -> deleteDireccion(position) }
+            onDeleteClicked = { position -> deleteDireccion(position) },
 
-        )
+            )
         recyclerView.adapter = adapter
     }
 
@@ -65,12 +64,12 @@ class ShowDireccionActivity : AppCompatActivity() {
     private fun deleteDireccion(position: Int) {
         // Se elimina el item de la lista
         direcciones.removeAt(position)
-
         saveDirecciones()
-
         //Notifica al RV
         adapter.notifyItemRemoved(position)
+
         Toast.makeText(this, "Direccion Eliminada Correctamente", Toast.LENGTH_SHORT).show()
+        finish()
 
     }
 
@@ -82,20 +81,5 @@ class ShowDireccionActivity : AppCompatActivity() {
         editor.apply()
     }
 
-
-    private fun editDireccion(position: Int) {
-        direcciones.removeAt(position)
-
-        //guarda las direccciones
-        saveDirecciones()
-
-        adapter.notifyItemRemoved(position)
-    }
-
-//    override fun onResume() {
-//        super.onResume()
-//        loadDirecciones()
-//        adapter.notifyDataSetChanged()
-//    }
 
 }

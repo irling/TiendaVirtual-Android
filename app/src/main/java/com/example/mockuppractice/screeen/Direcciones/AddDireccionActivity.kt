@@ -48,23 +48,31 @@ class AddDireccionActivity : CategoriasActivity() {
             val tipoDomi = ETtipoDomi.text.toString()
             val referencia = ETreferencia.text.toString()
 
-            val nuevaDireccion = formDireccion(direccion, numeroDire, tipoDomi, referencia)
+            if (direccion.isEmpty() || numeroDire.isEmpty() || tipoDomi.isEmpty() || referencia.isEmpty()) {
+                Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
 
-            val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
-            val json = sharedPreferences.getString("Direcciones", "[]")
+                val nuevaDireccion = formDireccion(direccion, numeroDire, tipoDomi, referencia)
 
-            val type = object : TypeToken<List<formDireccion>>() {}.type
-            val direcciones: MutableList<formDireccion> = gson.fromJson(json, type)
+                val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
+                val json = sharedPreferences.getString("Direcciones", "[]")
 
-            direcciones.add(nuevaDireccion)
+                val type = object : TypeToken<List<formDireccion>>() {}.type
+                val direcciones: MutableList<formDireccion> = gson.fromJson(json, type)
 
-            val editor = sharedPreferences.edit()
-            val jsonUpdated = gson.toJson(direcciones)
-            editor.putString("Direcciones", jsonUpdated)
-            editor.apply()
+                direcciones.add(nuevaDireccion)
 
-            Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show()
+                val editor = sharedPreferences.edit()
+                val jsonUpdated = gson.toJson(direcciones)
+                editor.putString("Direcciones", jsonUpdated)
+                editor.apply()
 
+                Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show()
+
+                finish()
+
+            }
 
         }
 

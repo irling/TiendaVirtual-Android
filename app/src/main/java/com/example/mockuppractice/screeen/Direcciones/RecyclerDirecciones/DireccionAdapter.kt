@@ -14,7 +14,6 @@ import com.example.mockuppractice.screeen.Direcciones.formDireccion
 class DireccionAdapter(
     private val context: Context,
     private val direcciones: MutableList<formDireccion>,
-    private val onEditClicked: (Int) -> Unit,
     private val onDeleteClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<DireccionAdapter.DireccionViewHolder>() {
 
@@ -25,7 +24,6 @@ class DireccionAdapter(
         val tvNumeroCasa: TextView = itemView.findViewById(R.id.tvNumeroCasa)
         val tvTipoDomi: TextView = itemView.findViewById(R.id.tvTipoDomi)
         val tvReferencia: TextView = itemView.findViewById(R.id.tvReferencia)
-        val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
         val btnDelete: Button = itemView.findViewById(R.id.btnDelete)
     }
 
@@ -42,10 +40,6 @@ class DireccionAdapter(
         holder.tvTipoDomi.text = "Tipo Domicilio: ${direccion.tipoDomi}"
         holder.tvReferencia.text = "Referencia: ${direccion.referencia}"
 
-        // Botón de Editar
-        holder.btnEdit.setOnClickListener {
-            onEditClicked(position)
-        }
 
         // Botón de Eliminar
         holder.btnDelete.setOnClickListener {
