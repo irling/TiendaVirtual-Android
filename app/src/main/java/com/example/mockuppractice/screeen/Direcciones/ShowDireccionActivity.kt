@@ -37,13 +37,10 @@ class ShowDireccionActivity : AppCompatActivity() {
 
     private fun showDataDirecciones() {
         val recyclerView = findViewById<RecyclerView>(R.id.rvDirecciones)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
-        val sharedPreferences = getSharedPreferences("DireccionUsers", MODE_PRIVATE)
-        val json = sharedPreferences.getString("Direcciones", "[]")
-
-        val type = object : TypeToken<List<formDireccion>>() {}.type
-        direcciones = gson.fromJson<MutableList<formDireccion>?>(json, type).toMutableList()
+        loadDirecciones()
 
         adapter = DireccionAdapter(
             this,
@@ -55,26 +52,50 @@ class ShowDireccionActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    private fun deleteDireccion(position: Int) {
-        val intent = Intent(this, AddDireccionActivity::class.java)
-        intent.putExtra("direcciones", position)
-        startActivity(intent)
+
+    private fun loadDirecciones() {
+        val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
+        val json = sharedPreferences.getString("Direcciones", "[]")
+
+        val type = object : TypeToken<List<formDireccion>>() {}.type
+        direcciones = gson.fromJson<MutableList<formDireccion>>(json, type).toMutableList()
     }
+
+
+    private fun deleteDireccion(position: Int) {
+        // Se elimina el item de la lista
+        direcciones.removeAt(position)
+
+        saveDirecciones()
+
+        //Notifica al RV
+        adapter.notifyItemRemoved(position)
+        Toast.makeText(this, "Direccion Eliminada Correctamente", Toast.LENGTH_SHORT).show()
+
+    }
+
+    private fun saveDirecciones() {
+        val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val json = gson.toJson(direcciones)
+        editor.putString("Direcciones", json)
+        editor.apply()
+    }
+
 
     private fun editDireccion(position: Int) {
         direcciones.removeAt(position)
 
         //guarda las direccciones
-        val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        val jsonUpdate = gson.toJson(direcciones)
-        editor.putString("Direcciones", jsonUpdate)
-        editor.apply()
+        saveDirecciones()
 
         adapter.notifyItemRemoved(position)
-
-        Toast.makeText(this, "Direccion Eliminada Correctamente", Toast.LENGTH_SHORT).show()
-
     }
+
+//    override fun onResume() {
+//        super.onResume()
+//        loadDirecciones()
+//        adapter.notifyDataSetChanged()
+//    }
 
 }

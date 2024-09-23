@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mockuppractice.R
 import com.example.mockuppractice.screeen.Direcciones.formDireccion
 
+//ADAPATE DEL RECYCLER VIEW
 class DireccionAdapter(
     private val context: Context,
     private val direcciones: MutableList<formDireccion>,
@@ -17,6 +18,8 @@ class DireccionAdapter(
     private val onDeleteClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<DireccionAdapter.DireccionViewHolder>() {
 
+
+    //VIEWHOLDER DEL RECYCLER VIEW
     class DireccionViewHolder(View: View) : RecyclerView.ViewHolder(View){
         val tvDireccion: TextView = itemView.findViewById(R.id.tvDireccion)
         val tvNumeroCasa: TextView = itemView.findViewById(R.id.tvNumeroCasa)

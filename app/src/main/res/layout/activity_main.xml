@@ -118,6 +118,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
+                        android:id="@+id/btnLoginGoogle"
                         android:background="@color/colorBackground"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -125,6 +126,7 @@
                         android:src="@drawable/google" />
 
                     <ImageButton
+                        android:id="@+id/btnLoginFacebook"
                         android:background="@color/colorBackground"
                         android:layout_width="80dp"
                         android:layout_height="80dp"

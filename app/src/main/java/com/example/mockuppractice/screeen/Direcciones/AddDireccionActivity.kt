@@ -19,7 +19,6 @@ import com.google.gson.Gson
 
 class AddDireccionActivity : CategoriasActivity() {
 
-    private val direcciones = mutableListOf<formDireccion>()
     private val gson = Gson()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +50,7 @@ class AddDireccionActivity : CategoriasActivity() {
 
             val nuevaDireccion = formDireccion(direccion, numeroDire, tipoDomi, referencia)
 
-            val sharedPreferences = getSharedPreferences("DireccionUsers", MODE_PRIVATE)
+            val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
             val json = sharedPreferences.getString("Direcciones", "[]")
 
             val type = object : TypeToken<List<formDireccion>>() {}.type
