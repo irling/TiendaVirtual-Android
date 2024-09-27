@@ -2,6 +2,7 @@ package com.example.mockuppractice.screeen.Direcciones
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -21,6 +22,7 @@ class ShowDireccionActivity : AppCompatActivity() {
 
     private lateinit var direcciones: MutableList<formDireccion>
     private lateinit var adapter: DireccionAdapter
+    private lateinit var btnVolver: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +33,22 @@ class ShowDireccionActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        initComponents()
         showDataDirecciones()
     }
 
+    private fun initComponents() {
+        btnVolver = findViewById(R.id.btnVolver)
+        btnVolver.setOnClickListener {
+            //regresa a la actividad anteriror.
+            finish()
+        }
+    }
+
+    //Mostramos los datos en un RV de manera vertical
     private fun showDataDirecciones() {
         val recyclerView = findViewById<RecyclerView>(R.id.rvDirecciones)
-        recyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
         loadDirecciones()
 
@@ -52,27 +62,28 @@ class ShowDireccionActivity : AppCompatActivity() {
     }
 
 
+    //Obtenemos las direcciones
     private fun loadDirecciones() {
         val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
         val json = sharedPreferences.getString("Direcciones", "[]")
-
         val type = object : TypeToken<List<formDireccion>>() {}.type
         direcciones = gson.fromJson<MutableList<formDireccion>>(json, type).toMutableList()
     }
 
 
+    //Para eliminar las direcciones
     private fun deleteDireccion(position: Int) {
         // Se elimina el item de la lista
         direcciones.removeAt(position)
         saveDirecciones()
         //Notifica al RV
         adapter.notifyItemRemoved(position)
-
         Toast.makeText(this, "Direccion Eliminada Correctamente", Toast.LENGTH_SHORT).show()
         finish()
 
     }
 
+    //Guarda el estado en la que se encuentra la activity
     private fun saveDirecciones() {
         val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)
         val editor = sharedPreferences.edit()

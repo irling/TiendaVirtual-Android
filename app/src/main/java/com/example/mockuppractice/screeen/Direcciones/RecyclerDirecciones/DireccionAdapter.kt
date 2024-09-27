@@ -20,6 +20,7 @@ class DireccionAdapter(
 
     //VIEWHOLDER DEL RECYCLER VIEW
     class DireccionViewHolder(View: View) : RecyclerView.ViewHolder(View){
+        //llamamos los datos del XML
         val tvDireccion: TextView = itemView.findViewById(R.id.tvDireccion)
         val tvNumeroCasa: TextView = itemView.findViewById(R.id.tvNumeroCasa)
         val tvTipoDomi: TextView = itemView.findViewById(R.id.tvTipoDomi)
@@ -28,10 +29,12 @@ class DireccionAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DireccionViewHolder {
+        //Mostramos la data del Layaout
         val view = LayoutInflater.from(context).inflate(R.layout.item_show_direccion, parent, false)
         return DireccionViewHolder(view)
     }
 
+    //Se mostrara la data obtenida en el RV
     override fun onBindViewHolder(holder: DireccionViewHolder, position: Int) {
         val direccion = direcciones[position]
 

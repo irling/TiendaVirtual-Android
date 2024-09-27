@@ -43,16 +43,18 @@ class AddDireccionActivity : CategoriasActivity() {
         val botonSave = findViewById<Button>(R.id.btnGuardarDireccion)
 
         botonSave.setOnClickListener {
+            //se recuperan los ET
             val direccion = ETdireccion.text.toString()
             val numeroDire = ETnumeroDire.text.toString()
             val tipoDomi = ETtipoDomi.text.toString()
             val referencia = ETreferencia.text.toString()
 
+            //validamos si estan los campos vacios (para obligar rellenar)
             if (direccion.isEmpty() || numeroDire.isEmpty() || tipoDomi.isEmpty() || referencia.isEmpty()) {
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT)
                     .show()
             } else {
-
+                //Se envian los datos!!!!!!
                 val nuevaDireccion = formDireccion(direccion, numeroDire, tipoDomi, referencia)
 
                 val sharedPreferences = getSharedPreferences("direccionesUsers", MODE_PRIVATE)

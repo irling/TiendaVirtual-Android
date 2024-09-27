@@ -15,16 +15,39 @@
         android:theme="@style/Theme.MockupPractice"
         tools:targetApi="31">
         <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt06"
+            android:exported="false" />
+        <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt05"
+            android:exported="false" />
+        <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt04"
+            android:exported="false" />
+        <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt03"
+            android:exported="false" />
+        <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt02"
+            android:exported="false" />
+        <activity
+            android:name=".screeen.RecyclerViewShirt.PagesShirt.Shirt01"
+            android:exported="false" />
+        <activity
             android:name=".screeen.Direcciones.ShowDireccionActivity"
             android:exported="false" />
         <activity
             android:name=".screeen.Direcciones.DireccionActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".screeen.Direcciones.AddDireccionActivity"
             android:exported="false" />
         <activity
-
             android:name=".screeen.DetailsActivity"
             android:exported="false" />
         <activity
@@ -51,15 +74,13 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
+        <!--
+ ACTIVIDAD PRINCIPAL
+        Alway "exported = true"
+        -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -60,6 +60,9 @@ dependencies {
     //Dependencias Gson
     implementation ("com.google.code.gson:gson:2.8.8")
 
+    //google pay
+    implementation ("com.google.android.gms:play-services-wallet:19.1.0")
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
