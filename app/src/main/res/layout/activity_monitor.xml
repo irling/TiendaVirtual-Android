@@ -43,7 +43,7 @@
         android:layout_width="240dp"
         android:layout_height="60dp"
         android:backgroundTint="@color/colorPrimary"
-        android:text="Tienda"
+        android:text="@string/tienda"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20sp" />
