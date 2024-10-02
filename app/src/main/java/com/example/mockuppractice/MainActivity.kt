@@ -51,23 +51,23 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Google Sign in
+        // Google Sign in
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        //FIREBASE ANALYTICS
+        // FIREBASE ANALYTICS
         firebaseAnalytics = Firebase.analytics
         val bundle = Bundle()
         bundle.putString("message", "Integracion de firebase")
         firebaseAnalytics.logEvent("InitScreen", bundle)
 
-        //Firebase Autentication
+        // Firebase Autentication
         auth = Firebase.auth
 
-        //DECLARACION DE VARIABLES
+        // DECLARACION DE VARIABLES
         val tvRegisterPage = findViewById<TextView>(R.id.tvRegister)
         tvRegisterPage.setOnClickListener { registerPage() }
 
